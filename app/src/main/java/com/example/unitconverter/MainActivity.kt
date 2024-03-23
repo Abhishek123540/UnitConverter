@@ -135,11 +135,11 @@ fun UnitConverter() {
                 DropdownMenu(expanded = oExpanded, onDismissRequest = { oExpanded = false }) {
                     DropdownMenuItem(
                         text = { Text(text = "Centimeters") },
-                        onClick = { /*TODO*/ }
+                        onClick = {/*TODO*/ }
                     )
                     DropdownMenuItem(
                         text = { Text(text = "Meters") },
-                        onClick = { /*TODO*/ }
+                        onClick = {/*TODO*/ }
                     )
                     DropdownMenuItem(
                         text = { Text(text = "Feet") },
