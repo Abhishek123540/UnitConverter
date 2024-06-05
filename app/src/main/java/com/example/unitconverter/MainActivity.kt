@@ -28,9 +28,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.AlignmentLine
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.unitconverter.ui.theme.UnitConverterTheme
 import org.w3c.dom.Text
 import kotlin.math.roundToInt
@@ -64,6 +68,12 @@ fun UnitConverter() {
     val conversionFactor = remember { mutableStateOf(1.0) }
     val oConversionFactor = remember { mutableStateOf(1.0) }
 
+    val customTextStyle = TextStyle(
+        fontFamily = FontFamily.Monospace,
+        fontSize = 32.sp,
+        color = Color.Red
+    )
+
     fun convertUnits() {
         // ?: - elvis operator
         val inputValueDouble = inputValue.toDoubleOrNull() ?: 0.0
@@ -79,7 +89,7 @@ fun UnitConverter() {
     ) {
         Text(
             "Unit Converter",
-            style = MaterialTheme.typography.headlineLarge
+            style = customTextStyle
 
         )
         Spacer(modifier = Modifier.height(16.dp))
