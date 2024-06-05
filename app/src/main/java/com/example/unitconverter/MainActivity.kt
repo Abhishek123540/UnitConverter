@@ -125,6 +125,7 @@ fun UnitConverter() {
                             iExpanded = false
                             inputUnit = "Millimeters"
                             conversionFactor.value = 0.001
+                            convertUnits()
                         }
                     )
                 }
